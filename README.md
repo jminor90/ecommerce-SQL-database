@@ -1,140 +1,43 @@
 # ecommerce-SQL-database
-An example of an e-commerce database that utilizes MySQL and Sequlize
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-# User Story
 
-AS A manager at an internet retail company
 
-I WANT a back end for my e-commerce website that uses the latest technologies
+## Description
+An example of an e-commerce database that utilizes Sequlize
 
-SO THAT my company can compete with other e-commerce companies
+## Table of Contents
 
-# Acceptance Criteria
+- [Installation](#installation)
+- [Usage](#usage)
+- [Tests](#tests)
+- [Credits](#credits)
+- [License](#license)
+- [Questions](#questions)
 
-GIVEN a functional Express.js API
+## Installation
+You may need to install the following packages...
 
-WHEN I add my database name, MySQL username, and MySQL password to an environment variable file
+Before running the application with node, be sure to use "npm install" to install all necessary Node Modules. (Dependencies listed in package.json)
 
-THEN I am able to connect to a database using Sequelize
+## Usage
 
-WHEN I enter schema and seed commands
+After installing node-modules, use "npm run seed" to seed database to local machine. Then use "npm run start" to start the server. Use an application like Insomnia to make Get, Put, Post and Delete requests to see complete functionality.
 
-THEN a development database is created and is seeded with test data
+[Demonstration Video](https://drive.google.com/file/d/121GU-eLBpvTuYTFHFBAhExKa_YYU12p0/view)
 
-WHEN I enter the command to invoke the application
+## Tests
+none
 
-THEN my server is started and the Sequelize models are synced to the MySQL database
+## Credits
+none
 
-WHEN I open API GET routes in Insomnia Core for categories, products, or tags
 
-THEN the data for each of these routes is displayed in a formatted JSON
 
-WHEN I test API POST, PUT, and DELETE routes in Insomnia Core
+## Questions?
 
-THEN I am able to successfully create, update, and delete data in my database
+- Github: https://github.com/jminor90
 
+- Email: minor.jbm@gmail.com
 
-# Database Models
-
-Your database should contain the following four models, including the requirements listed for each model:
-
-    Category
-
-        id
-
-        Integer
-
-        Doesn't allow null values
-
-        Set as primary key
-
-        Uses auto increment
-
-        category_name
-
-        String
-
-        Doesn't allow null values
-
-    Product
-
-        id
-
-        Integer
-
-        Doesn't allow null values
-
-        Set as primary key
-
-        Uses auto increment
-
-        product_name
-
-        String
-
-        Doesn't allow null values
-
-        price
-
-        Decimal
-
-        Doesn't allow null values
-
-        Validates that the value is a decimal
-
-        stock
-
-        Integer
-
-        Doesn't allow null values
-
-        Set a default value of 10
-
-        Validates that the value is numeric
-
-        category_id
-
-        Integer
-
-        References the category model's id
-
-    Tag
-
-        id
-
-        Integer
-
-        Doesn't allow null values
-
-        Set as primary key
-
-        Uses auto increment
-
-        tag_name
-
-        String
-
-    ProductTag
-
-        id
-
-        Integer
-
-        Doesn't allow null values
-
-        Set as primary key
-
-        Uses auto increment
-
-        product_id
-
-        Integer
-
-        References the product model's id
-
-        tag_id
-
-        Integer
-
-        References the tag model's id
